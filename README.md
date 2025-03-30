@@ -32,7 +32,7 @@ For Methods And Evaluation Criteria:
 
 2. **Q2**: "In algorithm 1, you calculate $\boldsymbol{v}_i$ in Line 7 before parameter update in zero-shot problem. Why do you update $\boldsymbol{v}_i$ again in Line (10)? Moreover, why don't you similarly update $\mathbf{U}_i$ in Line (10) for calculating $\boldsymbol{q}_i$?" 
 
-    **A2**: The difference between $\boldsymbol{v}_i$ and $\mathbf{U}_i$ in the variables used in their calculations determines their different updation. 
+    **A2**: The difference between $\boldsymbol{v}_i$ and $\mathbf{U}_i$ in the variables used in their calculations determines their different updates. 
     
     $\boldsymbol{v}_i = \boldsymbol{\omega}_i\mathbf{U}_i$ contains the meta-learning variable $\boldsymbol{\omega}_i$ output by the meta-learner $g$, i.e., $\boldsymbol{\omega}_i = g(\boldsymbol{x}_i;\mathbf{\Gamma})$, while $\mathbf{U}_i$ does not contain such a meta-learning variable. The goal of the calculation on $\boldsymbol{v}_i$ in Algorithm 1, Line (7) is to build the dependency between $v_i$ and the meta-learner parameters $\mathbf{\Gamma}$. After the meta-learning optimization on $\mathbf{\Gamma}$, we could obtain a more optimal $\boldsymbol{\omega}_i$, which could lead to a more optimal $\boldsymbol{v}_i$ if we update $\boldsymbol{v}_i$ with $\boldsymbol{\omega}_i$ again. If we don't re-calculate $\boldsymbol{v}_i$, the meta-learning process will be unnecessary and unhelpful.
 
@@ -49,7 +49,7 @@ For Theoretical Claims:
 
 1. **Q4**: "Some mathematical notations are wrong or misleading: (a) The definition of $\bar{\mathcal{Y}}$ is not clear. The authors denote $\bar{\mathcal{Y}}$ be the labels excluded from the label space $\mathcal{Y}$. It seems that $\bar{\mathcal{Y}}$ and $\mathcal{Y}$ is complementary but in fact $\bar{\mathcal{Y}}$ should be a subset of $\mathcal{Y}$. If I understand correctly, $\bar{\mathcal{Y}}$ should be a label space ruling out one or all non-partial labels of a given point. Therefore, it should be a point-wise concept."
 
-    **A4**: On Page 3 Lines 154-155, we define $\bar{\mathcal{Y}}$ as the labels excluded from the label space $\mathcal{Y}$, thus $\bar{\mathcal{Y}}$ is a subset of $\mathcal{Y}$. Besides, $\bar{\mathcal{Y}}$ is not a point-wise concept. In fact, given $\bar{\mathcal{Y}}$, we could obtain a set consists of instances whose ($\tau$, $f$, $\epsilon$)-disturbing incorrect labels constitute the label set $\bar{\mathcal{Y}}$. If there is still a misunderstanding or confusion, we plan to change $\bar{\mathcal{Y}}$ to $\mathcal{Y}^{-}$. 
+    **A4**: On Page 3 Lines 154-155, we define $\bar{\mathcal{Y}}$ as the labels excluded from the label space $\mathcal{Y}$, thus $\bar{\mathcal{Y}}$ is a subset of $\mathcal{Y}$. Besides, $\bar{\mathcal{Y}}$ is not a point-wise concept. In fact, given $\bar{\mathcal{Y}}$, we could obtain a set consisting of instances whose ($\tau$, $f$, $\epsilon$)-disturbing incorrect labels constitute the label set $\bar{\mathcal{Y}}$. If there is still a misunderstanding or confusion, we plan to change $\bar{\mathcal{Y}}$ to $\mathcal{Y}^{-}$. 
 
 2. **Q5**: "The definition of $J(x, \bar{\mathcal{Y}})$ is confusing because it is a collection of samples satisfying some conditions instead of a sample set related to a given point $x$."
 
