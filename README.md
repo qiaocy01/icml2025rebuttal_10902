@@ -9,8 +9,8 @@ _Proof_. According to the definition of $J(\bar{\mathcal{Y}})$ and ($\tau$, $f$,
 ||FMNIST|KMNIST|CIFAR10|CIFAR100|TinyImageNet|
 |-|-|-|-|-|-|
 |RPLG|**91.41±0.13**|**96.85±0.11**|**87.53±0.21**|**65.03±0.21**|**40.74±0.64**|
-|RPLG-updating $\mathbf{U}$|90.21±0.18|95.02±0.46|86.21±0.34|62.87±0.45|35.12±1.82|
-|RPLG-not rollbacking $\mathbf{\Theta}$|90.83±0.26|94.91±0.52|85.42±0.29|62.16±0.53|33.27±1.35|
+|RPLG-updating $\mathbf{U}_i$|90.21±0.18|95.02±0.46|86.21±0.34|62.87±0.45|35.12±1.82|
+|RPLG-without rollbacking to $\mathbf{\Theta}_j^k$|90.83±0.26|94.91±0.52|85.42±0.29|62.16±0.53|33.27±1.35|
 
 ## A More Readable Rebuttal Version
 
